@@ -1,0 +1,25 @@
+name: Sign packages
+
+on: push
+
+jobs:
+  sign:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Clone latest repository
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: Set up Ruby 3.1
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.1'
+    - name: install openssl
+      run: gem install openssl 
+    - name: sign it
+      env:
+        PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+      run: ./bin/sign_it.rb
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Automated signing of packages
