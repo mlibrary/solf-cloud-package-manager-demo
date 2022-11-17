@@ -10,7 +10,6 @@ services:
       - ./demo_public.der:/demo_public.der
     environment:
       - ZK_HOST=zoo:2181
-      #- SOLR_OPTS="-Denable.packages=true"
     depends_on:
       - zoo
     command: "solr-fg -Denable.packages=true"

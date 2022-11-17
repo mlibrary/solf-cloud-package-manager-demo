@@ -1,6 +1,6 @@
 name: Sign packages
 
-on: push
+#on: push
 
 jobs:
   sign:
