@@ -3,14 +3,17 @@ version: '3'
 services:
 
   solr:
-    image: solr
+    image: solr:8.11
     ports:
      - "8983:8983"
+    volumes:
+      - ./demo_public.der:/demo_public.der
     environment:
       - ZK_HOST=zoo:2181
+      #- SOLR_OPTS="-Denable.packages=true"
     depends_on:
       - zoo
-    command: solr-foreground
+    command: "solr-fg -Denable.packages=true"
 
   zoo:
     tty: true
