@@ -1,0 +1,21 @@
+[
+  {
+    "name": "demo_pkg",
+    "description": "demo plugin",
+    "versions": [
+      {
+        "version": "1.0.1",
+        "date": "2022-11-18",
+        "artifacts": [
+          {
+            "url": "runtimelibs3.jar",
+            "sig": ""
+          }
+        ],
+        "manifest": {
+          "version-constraint": "8 - 9"
+        }
+      }
+    ]
+  }
+]

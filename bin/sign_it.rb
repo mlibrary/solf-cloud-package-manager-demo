@@ -9,7 +9,7 @@ require "base64"
 private_key = OpenSSL::PKey::RSA.new(ENV.fetch("PRIVATE_KEY"))
 digest = OpenSSL::Digest.new("SHA1") 
 
-repository = JSON.load_file("./repository.json")
+repository = JSON.load_file("./repo/repository.json")
 repository.each do | plugin |
   plugin["versions"].each do |version|
     version["artifacts"].each do | jar |
@@ -19,4 +19,4 @@ repository.each do | plugin |
   end
 end
 
-File.write"./repository.json", JSON.pretty_generate(repository)
+File.write"./repo/repository.json", JSON.pretty_generate(repository)
