@@ -8,7 +8,7 @@
         "date": "2022-11-18",
         "artifacts": [
           {
-            "url": "runtimelibs3.jar",
+            "url": "runtimelibs.jar",
             "sig": "Xv1+1miVvk8txlkmbkyuyIHbAzenstcgd2DEWIM8mJvbNuaLpIhT2ePETQtWGlsNETx1Zsb2Jl7QJp8a6AORig=="
           }
         ],

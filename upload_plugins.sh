@@ -1,11 +1,11 @@
 docker-compose exec solr bin/solr package add-key /demo_public.der
 
 declare -A jars_to_package=( 
-["runtimelibs3.jar"]="demo_pkg" 
+["runtimelibs.jar"]="demo_pkg" 
 )
 
 declare -A jars_to_version=( 
-["runtimelibs3.jar"]="1.0.0" 
+["runtimelibs.jar"]="1.0.0" 
 )
 
 for jar in "${!jars_to_package[@]}"; 

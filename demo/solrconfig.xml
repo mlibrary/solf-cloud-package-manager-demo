@@ -91,6 +91,7 @@
     -->
   <dataDir>${solr.data.dir:}</dataDir>
 
+<requestHandler name="/test" class="demo_pkg:org.apache.solr.core.RuntimeLibReqHandler"></requestHandler>
 
   <!-- The DirectoryFactory to use for indexes.
 
