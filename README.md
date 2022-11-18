@@ -119,7 +119,7 @@ A package repository is a website that has three things in it:
 * `repository.json`
 * `jar` files
 
-This demo repo is also a package repository! Well not the whole thing, but the `repo` folder is. It has a `publickey.der` that actually committed to the repository and not auto generated with the `set_up_rsa_keys.sh` script. It has a `jar` file. In fact it's the same `jar` file that's in the  `lib` directory. And it is `repository.json` 
+This demo repo is also a package repository! Well not the whole thing, but the `repo` folder is. It has a `publickey.der` that is actually committed to the repository and not auto generated with the `set_up_rsa_keys.sh` script. It has a `jar` file. In fact it's the same `jar` file that's in the  `lib` directory. And it has `repository.json` 
 
 There's more that you can put in a `repository.json`, but this minimal version will work for manually configured plugins. (I.E. what we did with adding a line to `solrconfig.xml` that references the plugin.)
 
