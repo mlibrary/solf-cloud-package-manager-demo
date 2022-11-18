@@ -13,7 +13,7 @@ repository = JSON.load_file("./repo/repository.json")
 repository.each do | plugin |
   plugin["versions"].each do |version|
     version["artifacts"].each do | jar |
-      signature = Base64.encode64(private_key.sign(digest, File.read(jar["url"]))).gsub("\n","")
+      signature = Base64.encode64(private_key.sign(digest, File.read("repo/#{jar["url"]}"))).gsub("\n","")
       jar["sig"] = signature
     end
   end
