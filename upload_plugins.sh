@@ -7,7 +7,7 @@ docker-compose exec solr bin/solr package add-key /demo_public.der
 jar="runtimelibs.jar"
 
 # what to call the package
-package_name="demo_pkg"
+package_name="direct_demo_pkg"
 
 # the package version
 package_version="1.0.0"
